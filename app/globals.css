@@ -3,25 +3,53 @@
 @tailwind utilities;
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  background-color: #0f0714;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+  font-family: "Roboto", sans-serif;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+/* Customize the width of the scrollbar */
+::-webkit-scrollbar {
+  width: 0.5rem;
+  overflow: hidden;
 }
 
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+/* Style for the scrollbar track */
+::-webkit-scrollbar-track {
+  background-color: #0f0714;
+  overflow: hidden;
 }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
+/* Style for the scrollbar thumb */
+::-webkit-scrollbar-thumb {
+  background-color: #cb1e68;
+  overflow: hidden;
+  border-radius: 0.2rem;
+}
+
+/* Up arrow */
+::-webkit-scrollbar-button:single-button:vertical:decrement {
+  background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" fill="%23cb1e68" width="20" viewBox="0 0 24 24"><path d="M7 14l5-5 5 5H7z"/></svg>')
+    no-repeat center;
+    padding: 0;
+}
+
+/* Down arrow */
+::-webkit-scrollbar-button:single-button:vertical:increment {
+  background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" fill="%23cb1e68" width="20" viewBox="0 0 24 24"><path d="M7 10l5 5 5-5H7z"/></svg>')
+    no-repeat center;
+}
+
+/* Left arrow */
+::-webkit-scrollbar-button:single-button:horizontal:decrement {
+  background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" fill="%23cb1e68" width="20" viewBox="0 0 24 24"><path d="M14 7l-5 5 5 5V7z"/></svg>')
+    no-repeat center;
+}
+
+/* Right arrow */
+::-webkit-scrollbar-button:single-button:horizontal:increment {
+  background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" fill="%23cb1e68" width="20" viewBox="0 0 24 24"><path d="M10 7l5 5-5 5V7z"/></svg>')
+    no-repeat center;
 }
