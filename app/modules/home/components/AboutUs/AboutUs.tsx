@@ -1,7 +1,7 @@
 "use client";
 
 import PrimaryButton from "@/app/design-system/buttons/PrimaryButton";
-import cv from "@assets/hesham.pdf";
+// import cv from "../../../../../public/hesham.pdf";
 import { useInView } from "react-intersection-observer";
 
 export default function AboutUs() {
@@ -29,7 +29,7 @@ export default function AboutUs() {
               new and challenging projects that drive me to learn more about
               design in general.
             </p>
-            <a download="Hisham.pdf" className="w-fit">
+            <a download="hesham.pdf" className="w-fit">
               <PrimaryButton>Download CV</PrimaryButton>
             </a>
           </div>
