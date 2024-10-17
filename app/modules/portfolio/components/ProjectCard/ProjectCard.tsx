@@ -10,13 +10,13 @@ export default function ProjectCard({ project }: { project: Project }) {
 
   return (
     <div className="p-4 rounded-2xl flex flex-col gap-4 hover:bg-white hover:bg-opacity-5 transition-all duration-500">
-      <Link href="" className="h-72">
+      <Link href="" className="sm:h-72 h-64 overflow-hidden rounded-2xl">
         <Image
           src={project.images[0].url}
           width={700}
           height={700}
           alt={project.name}
-          className="h-full rounded-2xl object-cover"
+          className="h-full rounded-2xl object-cover hover:scale-[1.1] transition duration-500"
         />
       </Link>
       <div className="flex flex-col gap-2">
