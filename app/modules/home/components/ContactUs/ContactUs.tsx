@@ -14,7 +14,7 @@ export default function ContactUs() {
   const formRef = useRef<any>();
 
   const { ref: contactRef, inView: contactInReview } = useInView({
-    triggerOnce: false,
+    triggerOnce: true,
   });
 
   return (

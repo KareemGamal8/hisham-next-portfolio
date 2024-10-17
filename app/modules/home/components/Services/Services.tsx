@@ -7,7 +7,7 @@ import Link from "next/link";
 
 export default function Services() {
   const { ref: cardsRef, inView: cardsReview } = useInView({
-    triggerOnce: false,
+    triggerOnce: true,
   });
 
   return (
