@@ -1,10 +1,12 @@
-import PrimaryButton from "apps/front-office/design-system/buttons/PrimaryButton";
-import cv from "assets/Hisham.pdf";
+"use client";
+
+import PrimaryButton from "@/app/design-system/buttons/PrimaryButton";
+import cv from "@assets/hesham.pdf";
 import { useInView } from "react-intersection-observer";
 
 export default function AboutUs() {
   const { ref: aboutUsRef, inView: aboutUsReview } = useInView({
-    triggerOnce: false,
+    triggerOnce: true,
   });
 
   return (
@@ -12,7 +14,10 @@ export default function AboutUs() {
       <div className="container">
         <div
           ref={aboutUsRef}
-          className={`relative ${aboutUsReview && "animate-fade-right animate-duration-[1500ms]"}`}>
+          className={`relative ${
+            aboutUsReview && "animate-fade-right animate-duration-[1500ms]"
+          }`}
+        >
           <div className="flex flex-col gap-6">
             <p className="font-edu absolute -top-2 left-0 bg-gradient-to-tl from-cinder via-violet-red to-black-rose text-transparent bg-clip-text lg:text-lg text-md font-extrabold">
               Who am I!
@@ -24,7 +29,7 @@ export default function AboutUs() {
               new and challenging projects that drive me to learn more about
               design in general.
             </p>
-            <a href={cv} download="Hisham.pdf" className="w-fit">
+            <a download="Hisham.pdf" className="w-fit">
               <PrimaryButton>Download CV</PrimaryButton>
             </a>
           </div>
