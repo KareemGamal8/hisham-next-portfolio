@@ -13,10 +13,10 @@ export default function ProjectCard({ project }: { project: Project }) {
       <Link href="" className="sm:h-72 h-64 overflow-hidden rounded-2xl">
         <Image
           src={project.images[0].url}
-          width={700}
-          height={700}
+          width={1000}
+          height={1000}
           alt={project.name}
-          className="h-full rounded-2xl object-cover hover:scale-[1.1] transition duration-500"
+          className="h-full rounded-2xl object-cover hover:scale-[1.1] transition duration-500 hover:grayscale-[0.5]"
         />
       </Link>
       <div className="flex flex-col gap-2">
