@@ -17,8 +17,8 @@ export default function ProjectCard({ project }: { project: Project }) {
       >
         <Image
           src={project.images[0].url}
-          width={1000}
-          height={1000}
+          width={700}
+          height={700}
           alt={project.name}
           className="h-full rounded-2xl object-cover hover:scale-[1.1] transition duration-500 hover:grayscale-[0.5]"
         />

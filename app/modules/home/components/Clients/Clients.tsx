@@ -36,7 +36,7 @@ export default async function Clients() {
                 <Image
                   alt="Client"
                   src={client.image.url}
-                  className="w-[80%]"
+                  className="w-full"
                   width={1000}
                   height={1000}
                 />
