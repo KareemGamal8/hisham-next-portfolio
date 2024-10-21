@@ -9,7 +9,7 @@ export default function HeaderDrawerLinks() {
   return (
     <div
       className={cn(
-        "absolute z-60 bg-violet-red bg-opacity-70 shadow-xl left-0 w-full grid grid-rows-[0fr] transition-all duration-500",
+        "absolute z-60 bg-ebony-clay shadow-xl left-0 w-full grid grid-rows-[0fr] transition-all duration-500",
         opened && "grid-rows-[1fr]"
       )}
     >

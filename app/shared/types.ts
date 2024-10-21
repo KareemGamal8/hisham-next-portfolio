@@ -12,13 +12,16 @@ export type Attachment = {
 export type Category = {
   id: number | string;
   name: string;
+  color: string;
+};
+
+export type Pagination = {
+  page: number;
+  pageSize: number;
+  pageCount: number;
+  total: number;
 };
 
 export type Metadata = {
-  pagination: {
-    page: number;
-    pageSize: number;
-    pageCount: number;
-    total: number;
-  };
+  pagination: Pagination;
 };

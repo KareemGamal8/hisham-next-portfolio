@@ -1,20 +1,17 @@
 // append urls here, DO NOT remove this line
 
+import { Project } from "@/app/modules/portfolio/types";
+
 const URLS = {
   home: "/",
   aboutUs: "/about-us",
   notFound: "/404",
   services: "/services",
-  portfolio: "/portfolio",
-  contactUs: "/contact-us",
-  auth: {
-    login: "/login",
-    forgetPassword: "/forget-password",
-    resetPassword: "/rest-password",
-    register: "/register",
-    verifyForgetPassword: "/verify-password",
-    registerVerify: "/register/verify",
+  portfolio: {
+    list: "/portfolio",
+    viewProject: (project: Project) => `/portfolio/${project.id}`,
   },
+  contactUs: "/contact-us",
 };
 
 export default URLS;

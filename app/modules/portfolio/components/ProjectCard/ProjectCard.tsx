@@ -2,6 +2,7 @@ import Image from "next/image";
 import { Project } from "../../types";
 import Link from "next/link";
 import { IconCalendarEvent, IconCalendarMonth } from "@tabler/icons-react";
+import URLS from "@/app/design-system/utils/urls";
 
 export default function ProjectCard({ project }: { project: Project }) {
   const date = new Date(project.createdAt);
@@ -10,7 +11,10 @@ export default function ProjectCard({ project }: { project: Project }) {
 
   return (
     <div className="p-4 rounded-2xl flex flex-col gap-4 hover:bg-white hover:bg-opacity-5 transition-all duration-500">
-      <Link href="" className="sm:h-72 h-64 overflow-hidden rounded-2xl">
+      <Link
+        href={URLS.portfolio.viewProject(project)}
+        className="sm:h-72 h-64 overflow-hidden rounded-2xl"
+      >
         <Image
           src={project.images[0].url}
           width={1000}
@@ -20,9 +24,25 @@ export default function ProjectCard({ project }: { project: Project }) {
         />
       </Link>
       <div className="flex flex-col gap-2">
-        <Link href="" className="text-lg font-semibold text-white">
+        <Link
+          href={URLS.portfolio.viewProject(project)}
+          className="text-md font-semibold text-white"
+        >
           {project.name}
         </Link>
+        <div className="flex gap-2 flex-wrap items-center">
+          {project.categories.map((category) => (
+            <span
+              key={category.id}
+              className="text-white text-[0.55rem] font-semibold !bg-opacity-50 uppercase py-1 px-2 rounded-lg"
+              style={{
+                background: `#${category.color}`,
+              }}
+            >
+              {category.name}
+            </span>
+          ))}
+        </div>
         <div
           className="text-white text-opacity-40 truncate text-xs"
           dangerouslySetInnerHTML={{
@@ -32,7 +52,7 @@ export default function ProjectCard({ project }: { project: Project }) {
             ),
           }}
         />
-        <div className="flex items-end gap-1">
+        <div className="flex items-end gap-1 mt-auto">
           <IconCalendarMonth color="#ffffffab" size={18} />
           <p className="text-[0.65rem] font-semibold text-white text-opacity-70">
             {date.toLocaleDateString("en-US", options as any)}

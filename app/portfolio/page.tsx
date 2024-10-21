@@ -7,8 +7,20 @@ export const metadata: Metadata = {
   title: "Portfolio",
 };
 
-async function getProjects() {
-  const res = await fetch(`${BASE_API_URL}/projects?populate=*`);
+export type PostPageParams = {
+  params: {
+    id: number;
+  };
+};
+
+async function getProjects(searchParams: {
+  [key: string]: string | string[] | undefined;
+}) {
+  const res = await fetch(
+    `${BASE_API_URL}/projects?populate=*&pagination[pageSize]=12&pagination[page]=${
+      searchParams.page || 1
+    }`
+  );
 
   if (!res.ok) {
     throw new Error("Failed to fetch data");
@@ -17,10 +29,12 @@ async function getProjects() {
   return res.json();
 }
 
-export default async function PortfolioPage() {
-  const projects = await getProjects();
+export default async function PortfolioPage({
+  searchParams,
+}: {
+  searchParams: { [key: string]: string | string[] | undefined };
+}) {
+  const projects = await getProjects(searchParams);
 
-  return (
-    <ProjectsListing projects={projects.data} metadata={projects.metadata} />
-  );
+  return <ProjectsListing projects={projects.data} meta={projects.meta} />;
 }

@@ -13,7 +13,7 @@ export const linksData = [
   },
   {
     text: "Portfolio",
-    route: URLS.portfolio,
+    route: URLS.portfolio.list,
   },
 ];
 
