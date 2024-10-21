@@ -7,14 +7,6 @@ import { useInView } from "react-intersection-observer";
 import Typewriter from "typewriter-effect";
 
 export default function Hero() {
-  const { ref: textRef, inView: textInView } = useInView({
-    triggerOnce: false,
-  });
-
-  const { ref: imgRef, inView: imgInView } = useInView({
-    triggerOnce: false,
-  });
-
   return (
     <>
       <div className="min-h-[45rem] max-md:mt-2 text-white relative w-full overflow-hidden flex justify-between items-center">
@@ -31,7 +23,7 @@ export default function Hero() {
               height={300}
               src={wave}
               alt="wave"
-              className="w-[80vw] lg:w-[65vw] absolute right-1/2 -bottom-0 lg:-bottom-28 [@media(min-width:2150px)]:-bottom-48 max-w-screen-2xl -translate-x-16"
+              className="w-[80vw] lg:w-[65vw] absolute right-1/2 -bottom-0 lg:-bottom-40 [@media(min-width:2150px)]:-bottom-48 max-w-screen-2xl -translate-x-16"
             />
             <Image
               width={300}

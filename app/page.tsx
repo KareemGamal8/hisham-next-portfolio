@@ -5,6 +5,7 @@ import AboutUs from "./modules/home/components/AboutUs";
 import Services from "./modules/home/components/Services";
 import Features from "./modules/home/components/Features";
 import ContactUs from "./modules/home/components/ContactUs";
+import Clients from "./modules/home/components/Clients";
 
 export const metadata: Metadata = {
   title: "Home",
@@ -17,6 +18,7 @@ export default function Home() {
       <AboutUs />
       <Features />
       <Services />
+      <Clients />
       <ContactUs />
     </>
   );

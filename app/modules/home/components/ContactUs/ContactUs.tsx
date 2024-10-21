@@ -20,7 +20,7 @@ export default function ContactUs() {
   return (
     <div
       ref={contactRef}
-      className={`pb-16 ${
+      className={`py-16 ${
         contactInReview &&
         "animate-pulse py-8 animate-twice animate-duration-1000 animate-ease-out"
       }`}

@@ -46,12 +46,6 @@ export default function Services() {
                 <p className="text-white font-semibold leading-8">
                   {description}
                 </p>
-                <Link
-                  href=""
-                  className="text-white border-b cursor-pointer font-medium text-sm border-white"
-                >
-                  See more details →
-                </Link>
               </div>
             );
           })}
