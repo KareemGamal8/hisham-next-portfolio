@@ -15,6 +15,10 @@ export const linksData = [
     text: "Portfolio",
     route: URLS.portfolio.list,
   },
+  {
+    text: "Contact me",
+    route: URLS.contactMe,
+  },
 ];
 
 export const headerSocialLinks = [

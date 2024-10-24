@@ -10,7 +10,7 @@ export default function MainHeader() {
   const pathname = usePathname();
 
   return (
-    <div className="lg:block hidden bg-cinder border-ebony-clay border-b-2 sticky top-0 z-50 left-0 right-0 animate-fade-down animate-once animate-duration-700 delay-300 animate-ease-linear">
+    <div className="lg:block hidden bg-cinder sticky top-0 z-50 left-0 right-0 animate-fade-down animate-once animate-duration-700 delay-300 animate-ease-linear">
       <div className="container">
         <div className="flex justify-between py-2 items-center">
           <Link href={URLS.home}>

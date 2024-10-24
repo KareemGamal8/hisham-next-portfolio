@@ -15,7 +15,7 @@ export default function PrimaryButton({
       <button
         {...props}
         className={cn(
-          "w-fit uppercase text-white font-semibold bg-violet-red px-5 py-3 rounded-md",
+          "w-fit text-white font-semibold hover:bg-violet-red px-5 py-3 rounded-md bg-ebony-clay duration-500 transition-all",
           className
         )}
       >

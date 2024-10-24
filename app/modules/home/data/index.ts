@@ -17,6 +17,7 @@ import {
   IconShirt,
   IconShoppingBag,
   IconSoup,
+  IconVideo,
 } from "@tabler/icons-react";
 
 export const servicesData = [
@@ -37,6 +38,12 @@ export const servicesData = [
     description:
       "Transform your ideas into high-quality printed materials that leave a lasting impression.",
     Icon: IconPrinter,
+  },
+  {
+    text: "videos",
+    description:
+      "Motion videos blend visual art and technology to deliver engaging.",
+    Icon: IconVideo,
   },
 ];
 

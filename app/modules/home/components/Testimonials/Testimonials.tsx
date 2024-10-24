@@ -24,9 +24,9 @@ export default async function Testimonials() {
       <div className="container">
         <div className="flex flex-col gap-8 items-center justify-center">
           <SectionTitle
-            mainTitle="Our Clients Speak"
-            subtitle="Hear from our happy customers"
-            subtitleClassName="left-16"
+            mainTitle="Clients Speak"
+            subtitle="Our happy customers"
+            subtitleClassName="left-[22.5%]"
             mainTitleClassName="lg:text-5xl"
           />
           <TestimonialsList testimonials={testimonials.data as Testimonial[]} />

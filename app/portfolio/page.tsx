@@ -2,6 +2,8 @@ import { Metadata } from "next";
 import React from "react";
 import { BASE_API_URL } from "../shared/flags";
 import ProjectsListing from "../modules/portfolio/components/ProjectsListing";
+import Breadcrumb from "../design-system/components/Breadcrumb";
+import URLS from "../design-system/utils/urls";
 
 export const metadata: Metadata = {
   title: "Portfolio",
@@ -36,5 +38,15 @@ export default async function PortfolioPage({
 }) {
   const projects = await getProjects(searchParams);
 
-  return <ProjectsListing projects={projects.data} meta={projects.meta} />;
+  return (
+    <>
+      <Breadcrumb
+        items={[
+          { text: "Portfolio", url: URLS.portfolio.list },
+        ]}
+        title="My portfolio"
+      />
+      <ProjectsListing projects={projects.data} meta={projects.meta} />
+    </>
+  );
 }

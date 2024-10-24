@@ -11,7 +11,7 @@ const URLS = {
     list: "/portfolio",
     viewProject: (project: Project) => `/portfolio/${project.id}`,
   },
-  contactUs: "/contact-us",
+  contactMe: "/contact-me",
 };
 
 export default URLS;

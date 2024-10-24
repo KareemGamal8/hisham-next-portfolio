@@ -62,3 +62,7 @@
 .swiper-pagination-bullet {
   background-color: #cb1e68 !important;
 }
+
+.service-card:hover .service-icon {
+  background-color: #cb1e68;
+}

@@ -34,10 +34,10 @@ export default function TestimonialsList({
             <div className="flex gap-2 items-center">
               <IconUserCircle size={56} color="white" stroke={1.5} />
               <div className="flex flex-col gap-1">
-                <h4 className="bg-gradient-to-tl text-xl font-extrabold from-cinder via-violet-red to-black-rose text-transparent bg-clip-text">
+                <h4 className="bg-gradient-to-tl font-extrabold from-cinder via-violet-red to-black-rose text-transparent bg-clip-text">
                   {testimonial.name}
                 </h4>
-                <span className="text-white text-sm font-edu italic font-bold">
+                <span className="text-white text-xs font-edu italic font-bold">
                   {testimonial.job}
                 </span>
               </div>

@@ -19,7 +19,7 @@ export default function SectionTitle({
     <div className={cn("relative", className)}>
       <span
         className={cn(
-          "font-edu absolute -top-4 -left-0 bg-gradient-to-tl font-extrabold from-cinder via-violet-red to-black-rose text-transparent bg-clip-text lg:text-xl",
+          "font-edu italic absolute -top-4 -left-0 bg-gradient-to-tl font-extrabold from-cinder via-violet-red to-black-rose text-transparent bg-clip-text lg:text-xl",
           subtitleClassName,
         )}>
         {subtitle}

@@ -1,18 +1,18 @@
 "use client";
 
-import Breadcrumb from "@/app/design-system/components/Breadcrumb";
 import SectionTitle from "@/app/design-system/components/SectionTitle";
 import EmailInput from "@/app/design-system/form/EmailInput";
 import SubmitButton from "@/app/design-system/form/SubmitButton";
 import TextareaInput from "@/app/design-system/form/TextareaInput";
 import TextInput from "@/app/design-system/form/TextInput";
-import URLS from "@/app/design-system/utils/urls";
 import { Form, FormSubmitOptions } from "@mongez/react-form";
 import { useRef } from "react";
 import toast from "react-hot-toast";
 import { useInView } from "react-intersection-observer";
+import Breadcrumb from "../design-system/components/Breadcrumb";
+import URLS from "../design-system/utils/urls";
 
-export default function ContactUs() {
+export default function ContactUsPage() {
   const formRef = useRef<any>();
 
   const { ref: contactRef, inView: contactInReview } = useInView({
@@ -21,6 +21,10 @@ export default function ContactUs() {
 
   return (
     <>
+      <Breadcrumb
+        items={[{ text: "Contact me", url: URLS.contactMe }]}
+        title="Contact me"
+      />
       <div
         ref={contactRef}
         className={`py-16 ${

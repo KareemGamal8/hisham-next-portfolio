@@ -11,11 +11,7 @@ const config: Config = {
     container: {
       center: true,
       padding: {
-        DEFAULT: "1rem",
-        sm: "2rem",
-        lg: "4rem",
-        xl: "5rem",
-        "2xl": "6rem",
+        DEFAULT: "2rem",
       },
     },
     extend: {
@@ -39,6 +35,8 @@ const config: Config = {
         "text-background":
           "linear-gradient(to right, #CB1E68 61%, #1C263D 95%)",
         "home-background": "url('assets/images/home-background.webp')",
+        "breadcrumb-background":
+          "linear-gradient(360deg, #cb1e6800, #63082f42)",
       },
     },
     fontFamily: {
