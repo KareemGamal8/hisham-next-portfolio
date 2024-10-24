@@ -33,7 +33,7 @@
 ::-webkit-scrollbar-button:single-button:vertical:decrement {
   background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" fill="%23cb1e68" width="20" viewBox="0 0 24 24"><path d="M7 14l5-5 5 5H7z"/></svg>')
     no-repeat center;
-    padding: 0;
+  padding: 0;
 }
 
 /* Down arrow */
@@ -52,4 +52,13 @@
 ::-webkit-scrollbar-button:single-button:horizontal:increment {
   background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" fill="%23cb1e68" width="20" viewBox="0 0 24 24"><path d="M10 7l5 5-5 5V7z"/></svg>')
     no-repeat center;
+}
+
+.swiper {
+  width: 100%;
+  height: 100%;
+}
+
+.swiper-pagination-bullet {
+  background-color: #cb1e68 !important;
 }

@@ -1,7 +1,7 @@
 import SectionTitle from "@/app/design-system/components/SectionTitle";
 import { BASE_API_URL } from "@/app/shared/flags";
 import { Client } from "../../types";
-import Image from "next/image";
+import ClientsImages from "../ClientsImages";
 
 async function getClients() {
   const res = await fetch(`${BASE_API_URL}/clients?populate=*`);
@@ -30,19 +30,7 @@ export default async function Clients() {
             subtitleClassName="left-0 lg:translate-x-[45%] translate-x-[40%]"
             mainTitleClassName="lg:text-5xl"
           />
-          <div className="grid lg:grid-cols-4 gap-8 grid-cols-3 w-full">
-            {clients.map((client) => (
-              <div key={client.id} className="w-full flex justify-center items-center">
-                <Image
-                  alt="Client"
-                  src={client.image.url}
-                  className="w-full"
-                  width={1000}
-                  height={1000}
-                />
-              </div>
-            ))}
-          </div>
+          <ClientsImages clients={clients} />
         </div>
       </div>
     </div>

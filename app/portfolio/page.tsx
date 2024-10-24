@@ -19,10 +19,7 @@ async function getProjects(searchParams: {
   const res = await fetch(
     `${BASE_API_URL}/projects?populate=*&pagination[pageSize]=12&pagination[page]=${
       searchParams.page || 1
-    }`,
-    {
-      cache: "no-store",
-    }
+    }`
   );
 
   if (!res.ok) {
