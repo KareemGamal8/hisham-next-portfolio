@@ -24,7 +24,7 @@ export default function Breadcrumb({ items, title }: AboutUsTypes) {
       <div className="absolute inset-0 h-full -z-10 w-full bg-breadcrumb-background"></div>
       <div className="container">
         <div className="flex flex-col gap-4 items-center justify-center">
-          <h3 className="text-white uppercase text-xl font-semibold truncate">
+          <h3 className="text-white uppercase text-2xl md:text-4xl font-semibold truncate">
             {theTitle}
           </h3>
           <div className="flex items-center flex-wrap gap-2 text-silver text-[0.9rem] text-white">

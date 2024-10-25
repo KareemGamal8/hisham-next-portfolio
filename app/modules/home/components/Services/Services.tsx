@@ -3,7 +3,6 @@
 import { useInView } from "react-intersection-observer";
 import { servicesData } from "../../data";
 import SectionTitle from "@/app/design-system/components/SectionTitle";
-import Link from "next/link";
 
 export default function Services() {
   const { ref: cardsRef, inView: cardsReview } = useInView({
@@ -49,12 +48,12 @@ export default function Services() {
                       {description}
                     </p>
                   </div>
-                  <Link
+                  {/* <Link
                     href=""
                     className="text-white border-b font mt-auto cursor-pointer font-semibold text-md border-white"
                   >
                     See more details →
-                  </Link>
+                  </Link> */}
                 </div>
               </div>
             );

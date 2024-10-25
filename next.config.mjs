@@ -1,7 +1,10 @@
 /** @type {import('next').NextConfig} */
+import { withNextVideo } from "next-video/process";
+
 const nextConfig = {
   output: "standalone",
   images: {
+    domains: ["res.cloudinary.com"],
     remotePatterns: [
       {
         protocol: "https",
@@ -11,4 +14,4 @@ const nextConfig = {
   },
 };
 
-export default nextConfig;
+export default withNextVideo(nextConfig);

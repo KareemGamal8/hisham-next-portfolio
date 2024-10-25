@@ -1,4 +1,3 @@
-import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
 import Header from "./design-system/components/Header";
@@ -10,6 +9,8 @@ const geistSans = localFont({
   weight: "100 200 300 400 500 600 700 800 900",
 });
 
+
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -17,7 +18,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${geistSans.variable}  antialiased flex flex-col min-h-[100vh]`}>
+      <body
+        className={`${geistSans.variable}  antialiased flex flex-col min-h-[100vh]`}
+      >
         <Header />
         {children}
         <Footer />
