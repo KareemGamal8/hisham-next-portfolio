@@ -8,7 +8,6 @@ export default function ProjectCard({ project }: { project: Project }) {
   const date = new Date(project.createdAt);
 
   const options = { year: "numeric", month: "long", day: "numeric" };
-  
 
   return (
     <div className="p-4 rounded-2xl flex flex-col gap-4 hover:bg-white hover:bg-opacity-5 transition-all duration-500">

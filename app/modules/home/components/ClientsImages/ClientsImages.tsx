@@ -19,7 +19,7 @@ export default function ClientsImages({ clients }: { clients: Client[] }) {
           key={client.id}
           className={`${
             clientsInView &&
-            "animate-jump animate-twice animate-duration-[1500ms]"
+            "animate-jump-in animate-once animate-duration-[1500ms] animate-ease-out"
           }`}
         >
           <Image

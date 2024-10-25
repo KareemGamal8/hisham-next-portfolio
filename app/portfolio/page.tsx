@@ -38,12 +38,12 @@ export default async function PortfolioPage({
 }) {
   const projects = await getProjects(searchParams);
 
+  if (!projects.data || !projects.data.length) return null;
+
   return (
     <>
       <Breadcrumb
-        items={[
-          { text: "Portfolio", url: URLS.portfolio.list },
-        ]}
+        items={[{ text: "Portfolio", url: URLS.portfolio.list }]}
         title="My portfolio"
       />
       <ProjectsListing projects={projects.data} meta={projects.meta} />
