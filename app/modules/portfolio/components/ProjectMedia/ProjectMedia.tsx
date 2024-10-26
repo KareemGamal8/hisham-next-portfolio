@@ -7,7 +7,7 @@ import Player from "next-video/player";
 
 export default function ProjectMedia({ project }: { project: Project }) {
   return (
-    <div className="my-8">
+    <div className="my-12">
       <div className="container">
         <div className="flex flex-col lg:w-[45%] m-auto items-center justify-center gap-4">
           {project.images.map((image) => (
@@ -18,7 +18,7 @@ export default function ProjectMedia({ project }: { project: Project }) {
               alt={project.images[0].url}
               width={1000}
               height={1000}
-              className="max-h-[75vh] rounded-2xl"
+              className="rounded-2xl"
             />
           ))}
           {project.video &&

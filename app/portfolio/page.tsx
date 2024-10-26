@@ -19,14 +19,14 @@ async function getProjects(searchParams: {
   [key: string]: string | string[] | undefined;
 }) {
   const pagination = searchParams.page
-    ? `&pagination[pageSize]=12&pagination[page]=${searchParams.page}`
-    : "";
+    ? `&pagination[page]=${searchParams.page}`
+    : `&pagination[page]=${1}`;
 
   const categoryFilter = searchParams.category
     ? `&filters[categories][id][$in]=${searchParams.category}`
     : "";
 
-  const url = `${BASE_API_URL}/projects?populate=*${pagination}${categoryFilter}`;
+  const url = `${BASE_API_URL}/projects?populate=*&pagination[pageSize]=12${pagination}${categoryFilter}`;
 
   const res = await fetch(url);
 

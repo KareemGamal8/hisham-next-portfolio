@@ -34,7 +34,9 @@ export default function Pagination({
     pagination.pageCount
   );
 
-  if (pagination.total) return null;
+
+
+  if (pagination.pageCount < 2) return null;
 
   return (
     <div className="flex justify-center items-center gap-2 mt-8">
