@@ -12,7 +12,7 @@ export default function AboutUs() {
   });
 
   return (
-    <div className="bg-haiti py-16">
+    <div className="bg-[#180b218c] py-16">
       <div className="container">
         <div
           ref={aboutUsRef}
@@ -36,7 +36,7 @@ export default function AboutUs() {
               className="w-fit"
               target="_blank"
             >
-              <PrimaryButton className="text-lg font-semibold capitalize py-2">
+              <PrimaryButton className="text-md font-semibold capitalize py-4">
                 See my resume
               </PrimaryButton>
             </Link>

@@ -9,8 +9,8 @@ export default function HeaderDrawerLinks() {
   return (
     <div
       className={cn(
-        "absolute z-60 bg-ebony-clay shadow-xl left-0 w-full grid grid-rows-[0fr] transition-all duration-500",
-        opened && "grid-rows-[1fr]"
+        "absolute z-60 bg-cinder border-0 border-ebony-clay left-0 w-full grid grid-rows-[0fr] transition-all duration-500",
+        opened && "grid-rows-[1fr] border-2 rounded-b-lg shadow-xl"
       )}
     >
       <div className="transition-all overflow-hidden">
@@ -20,7 +20,10 @@ export default function HeaderDrawerLinks() {
               key={index}
               onClick={headerAtom.close}
               href={link.route}
-              className={`text-md py-4 hover:bg-black-rose border-y-[0.5px] border-y-white border-opacity-50 transition-all duration-500 font-bold text-center w-full`}
+              className={`text-md py-4 hover:bg-black-rose transition-all duration-500 font-bold text-center w-full ${
+                index > 0 &&
+                "border-y-[0.5px] border-y-ebony-clay border-opacity-50"
+              }`}
             >
               {link.text}
             </Link>
@@ -31,7 +34,10 @@ export default function HeaderDrawerLinks() {
                 const { Icon, url } = link;
                 return (
                   <Link key={index} href={url} target="_blank">
-                    <Icon className="transition-all hover:text-violet-red delay-75" size={28} />
+                    <Icon
+                      className="transition-all hover:text-violet-red"
+                      size={28}
+                    />
                   </Link>
                 );
               })}

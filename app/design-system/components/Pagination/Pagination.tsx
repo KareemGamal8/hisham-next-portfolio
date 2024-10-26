@@ -34,6 +34,8 @@ export default function Pagination({
     pagination.pageCount
   );
 
+  if (pagination.total) return null;
+
   return (
     <div className="flex justify-center items-center gap-2 mt-8">
       <button

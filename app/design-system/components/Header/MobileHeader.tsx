@@ -6,6 +6,7 @@ import "./styles.css";
 import Link from "next/link";
 import URLS from "../../utils/urls";
 import Image from "next/image";
+import CategoriesMenu from "./CategoriesMenu ";
 export default function MobileHeader() {
   return (
     <div className="sticky lg:hidden bg-cinder border-ebony-clay border-b-2 block top-0 left-0 right-0 z-50 animate-fade-down animate-once animate-duration-500 animate-ease-linear">
@@ -16,7 +17,10 @@ export default function MobileHeader() {
               <Link href={URLS.home}>
                 <Image src={logo} alt="logo" width={120} height={120} />
               </Link>
-              <HeaderDrawer />
+              <div className="flex gap-4 items-center">
+                <CategoriesMenu />
+                <HeaderDrawer />
+              </div>
             </div>
           </div>
         </div>

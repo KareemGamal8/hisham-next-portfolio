@@ -19,6 +19,7 @@ export default function ProjectDetails({ project }: { project: Project }) {
       <div className="grid grid-cols-12 items-center gap-6">
         <div className="lg:col-span-4 col-span-full overflow-hidden rounded-2xl">
           <Image
+            loading="lazy"
             src={project.images[0].url}
             width={700}
             height={700}

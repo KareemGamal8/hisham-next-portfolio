@@ -19,18 +19,21 @@ export default function TestimonialsList({
       pagination={{
         dynamicBullets: true,
       }}
+      speed={1000}
+      effect={"fade"}
+      spaceBetween={8}
       modules={[Pagination, Autoplay]}
       autoplay={{
         delay: 5000,
         disableOnInteraction: false,
-        pauseOnMouseEnter:true
+        pauseOnMouseEnter: true,
       }}
       className="mySwiper"
       loop
     >
       {testimonials.map((testimonial) => (
         <SwiperSlide key={testimonial.id}>
-          <div className="flex flex-col gap-3 mb-8">
+          <div className="flex flex-col gap-3 mb-8 p-4 rounded-2xl">
             <div className="flex gap-2 items-center">
               <IconUserCircle size={56} color="white" stroke={1.5} />
               <div className="flex flex-col gap-1">

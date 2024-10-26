@@ -10,7 +10,7 @@ export default function ProjectCard({ project }: { project: Project }) {
   const options = { year: "numeric", month: "long", day: "numeric" };
 
   return (
-    <div className="p-4 rounded-2xl flex flex-col gap-4 hover:bg-white hover:bg-opacity-5 transition-all duration-500">
+    <div className="p-4 rounded-2xl animate-fade-up animate-once animate-ease-linear  flex flex-col gap-4 hover:bg-white hover:bg-opacity-5 transition-all duration-500">
       <Link
         href={URLS.portfolio.viewProject(project)}
         className="sm:h-72 h-64 overflow-hidden rounded-2xl"
@@ -20,6 +20,7 @@ export default function ProjectCard({ project }: { project: Project }) {
           width={700}
           height={700}
           alt={project.name}
+          loading="lazy"
           className="h-full rounded-2xl object-cover hover:scale-[1.1] transition duration-500 hover:grayscale-[0.5]"
         />
       </Link>

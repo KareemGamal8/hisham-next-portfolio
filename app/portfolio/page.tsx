@@ -18,11 +18,17 @@ export type PostPageParams = {
 async function getProjects(searchParams: {
   [key: string]: string | string[] | undefined;
 }) {
-  const res = await fetch(
-    `${BASE_API_URL}/projects?populate=*&pagination[pageSize]=12&pagination[page]=${
-      searchParams.page || 1
-    }`
-  );
+  const pagination = searchParams.page
+    ? `&pagination[pageSize]=12&pagination[page]=${searchParams.page}`
+    : "";
+
+  const categoryFilter = searchParams.category
+    ? `&filters[categories][id][$in]=${searchParams.category}`
+    : "";
+
+  const url = `${BASE_API_URL}/projects?populate=*${pagination}${categoryFilter}`;
+
+  const res = await fetch(url);
 
   if (!res.ok) {
     throw new Error("Failed to fetch data");

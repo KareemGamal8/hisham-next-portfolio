@@ -17,7 +17,7 @@ export default function ProjectsListing({
 
   return (
     <section className="container my-16">
-      <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-8">
+      <div className="grid grid-cols-1 overflow-hidden lg:grid-cols-2 xl:grid-cols-3 gap-8">
         {projects.map((project) => (
           <ProjectCard key={project.id} project={project} />
         ))}

@@ -11,7 +11,7 @@ export default function ClientsImages({ clients }: { clients: Client[] }) {
 
   return (
     <div
-      className="grid lg:grid-cols-4 gap-8 grid-cols-3 w-full"
+      className="grid lg:grid-cols-4 gap-8 grid-cols-3 w-full overflow-hidden"
       ref={clientsRef}
     >
       {clients.map((client) => (
@@ -23,6 +23,7 @@ export default function ClientsImages({ clients }: { clients: Client[] }) {
           }`}
         >
           <Image
+            loading="lazy"
             alt="Client"
             src={client.image.url}
             width={1000}

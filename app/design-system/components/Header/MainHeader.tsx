@@ -5,14 +5,15 @@ import URLS from "../../utils/urls";
 import Link from "next/link";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
+import CategoriesMenu from "./CategoriesMenu ";
 
 export default function MainHeader() {
   const pathname = usePathname();
 
   return (
-    <div className="lg:block hidden bg-cinder sticky top-0  border-ebony-clay border-b-2 z-50 left-0 right-0 animate-fade-down animate-once animate-duration-700 delay-300 animate-ease-linear">
+    <div className="lg:block hidden bg-cinder sticky top-0  border-ebony-clay border-b-2 z-50 left-0 right-0">
       <div className="container">
-        <div className="flex justify-between py-2 items-center">
+        <div className="flex justify-between py-2 items-center animate-fade-down animate-once animate-duration-700 delay-300 animate-ease-linear">
           <Link href={URLS.home}>
             <Image src={logo} alt="logo" width={130} className="w-24" />
           </Link>
@@ -30,6 +31,7 @@ export default function MainHeader() {
                 {link.text}
               </Link>
             ))}
+            <CategoriesMenu />
             <div className="bg-gray-400 h-8 w-[1px]"></div>
             <div className="flex gap-4 items-center">
               {headerSocialLinks.map((link, index) => {

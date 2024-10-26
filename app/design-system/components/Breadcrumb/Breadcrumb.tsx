@@ -20,7 +20,7 @@ export default function Breadcrumb({ items, title }: AboutUsTypes) {
     : title;
 
   return (
-    <div className="mb-4 flex-col text-center w-full bg-breadcrumb-background flex gap-4 justify-center items-center relative overflow-hidden py-12">
+    <div className="mb-4 flex-col  text-center w-full bg-breadcrumb-background flex gap-4 justify-center items-center relative overflow-hidden py-12">
       <div className="absolute inset-0 h-full -z-10 w-full bg-breadcrumb-background"></div>
       <div className="container">
         <div className="flex flex-col gap-4 items-center justify-center">

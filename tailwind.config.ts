@@ -29,7 +29,7 @@ const config: Config = {
         "violet-red": "#CB1E68",
         "ebony-clay": "#1c263d",
         cinder: "#0f0714",
-        haiti: "#180b21",
+        haiti: "#180b218c",
       },
       backgroundImage: {
         "text-background":

@@ -13,12 +13,12 @@ export default function ProjectMedia({ project }: { project: Project }) {
           {project.images.map((image) => (
             <Image
               key={image.id}
+              loading="lazy"
               src={image.url}
               alt={project.images[0].url}
               width={1000}
               height={1000}
               className="max-h-[75vh] rounded-2xl"
-              priority
             />
           ))}
           {project.video &&

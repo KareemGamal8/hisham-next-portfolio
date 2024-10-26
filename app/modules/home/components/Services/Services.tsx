@@ -10,11 +10,7 @@ export default function Services() {
   });
 
   return (
-    <div
-      className={`bg-haiti py-16 ${
-        cardsReview && "animate-fade-down animate-duration-[1500ms]"
-      }`}
-    >
+    <div className={`bg-haiti py-16`}>
       <div className="container">
         <div className="flex justify-center items-center">
           <SectionTitle
@@ -26,7 +22,9 @@ export default function Services() {
         </div>
         <div
           ref={cardsRef}
-          className="grid lg:grid-cols-4 md:grid-cols-2 grid-cols-1 lg:gap-10 gap-16 mt-16"
+          className={`grid lg:grid-cols-4 md:grid-cols-2 grid-cols-1 lg:gap-10 gap-16 mt-16  ${
+            cardsReview && "animate-fade-down animate-duration-[1500ms]"
+          }`}
         >
           {servicesData.map((service, index) => {
             const { Icon, description, text } = service;
@@ -34,14 +32,14 @@ export default function Services() {
             return (
               <div
                 key={index}
-                className="bg-ebony-clay rounded-lg relative p-4 hover:bg-violet-red duration-500 transition-all service-card ease-linear"
+                className="bg-ebony-clay bg-opacity-50 rounded-lg relative p-4 hover:bg-violet-red duration-500 transition-all service-card ease-linear"
               >
                 <div className="p-3 rounded-full left-[50%] -top-8 translate-x-[-50%] bg-ebony-clay transition-all duration-500 absolute border-[6px] service-icon ease-linear">
                   <Icon color="white" size={26} />
                 </div>
                 <div className="flex flex-col justify-between h-full items-center gap-2">
                   <div className="flex flex-col gap-2 text-center justify-center items-center mt-6">
-                    <h3 className="text-white text-xl uppercase font-bold italic">
+                    <h3 className="text-white text-xl capitalize font-bold">
                       {text}
                     </h3>
                     <p className="text-white text-sm leading-6">
