@@ -1,16 +1,18 @@
 import React, { useEffect, useState } from "react";
 import { BASE_API_URL } from "@/app/shared/flags";
 import { Category } from "@/app/shared/types";
-import { useRouter, useSearchParams } from "next/navigation";
+import { useRouter } from "next/navigation";
 import LoadingCategories from "./LoadingCategories";
 import URLS from "../../utils/urls";
 
 export default function CategoriesList() {
-  const [categories, setCategories] = useState<Category[]>([]);
-  const [loading, setLoading] = useState(true);
-
   const router = useRouter();
-  const searchParams = useSearchParams();
+
+  const [categories, setCategories] = useState<Category[]>([]);
+
+  const [loading, setLoading] = useState(true);
+  
+  const [activeCategory, setActiveCategory] = useState<number | null>(null);
 
   useEffect(() => {
     const fetchCategories = async () => {
@@ -35,16 +37,19 @@ export default function CategoriesList() {
     return <LoadingCategories />;
   }
 
+  const handleCategoryClick = (categoryId: number) => {
+    setActiveCategory(categoryId);
+    router.push(`${URLS.portfolio.list}?category=${categoryId}`);
+  };
+
   return (
     <div className="flex flex-col gap-1 text-white text-sm">
       {categories.map((category) => (
         <button
-          onClick={() =>
-            router.push(`${URLS.portfolio.list}?category=${category.id}`)
-          }
+          onClick={() => handleCategoryClick(category.id as number)}
           key={category.id}
           className={`hover:bg-violet-red capitalize hover:bg-opacity-85 p-2 transition-all ${
-            searchParams.get("category") == category.id &&
+            activeCategory === category.id &&
             "bg-violet-red bg-opacity-85 font-semibold"
           }`}
         >
