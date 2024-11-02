@@ -2,6 +2,7 @@
 import { withNextVideo } from "next-video/process";
 
 const nextConfig = {
+  reactStrictMode: false,
   output: "standalone",
   images: {
     domains: ["res.cloudinary.com"],
