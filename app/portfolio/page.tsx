@@ -29,11 +29,10 @@ async function getProjects(searchParams: {
   const url = `${BASE_API_URL}/projects?populate=*&pagination[pageSize]=12${pagination}${categoryFilter}`;
 
   const res = await fetch(url);
-
   if (!res.ok) {
-    throw new Error("Failed to fetch data");
+    console.error("Failed to fetch data:", res.statusText);
+    return { data: [], meta: {} };
   }
-
   return res.json();
 }
 
