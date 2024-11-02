@@ -44,7 +44,7 @@ export default async function PortfolioPage({
 }) {
   const projects = await getProjects(searchParams);
 
-  if (!projects.data || !projects.data.length) return null;
+  if (!projects.data || !projects.data.length || !projects) return null;
 
   return (
     <>
