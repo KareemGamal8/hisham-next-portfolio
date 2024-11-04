@@ -13,14 +13,12 @@ export default function MobileHeader() {
       <div>
         <div>
           <div className="container">
-            <div className="flex justify-between py-2 items-center text-white">
+            <div className="flex justify-between gap-4 py-4 items-center text-white">
               <Link href={URLS.home}>
-                <Image src={logo} alt="logo" width={120} height={120} />
+                <Image src={logo} alt="logo" className="w-12" width={120} height={120} />
               </Link>
-              <div className="flex gap-4 items-center">
-                <CategoriesMenu />
-                <HeaderDrawer />
-              </div>
+              <CategoriesMenu />
+              <HeaderDrawer />
             </div>
           </div>
         </div>

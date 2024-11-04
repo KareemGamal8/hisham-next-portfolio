@@ -13,10 +13,13 @@ export default function MainHeader() {
   return (
     <div className="lg:block hidden bg-cinder sticky top-0  border-ebony-clay border-b-2 z-50 left-0 right-0">
       <div className="container">
-        <div className="flex justify-between py-2 items-center animate-fade-down animate-once animate-duration-700 delay-300 animate-ease-linear">
+        <div className="flex justify-between py-4 items-center animate-fade-down animate-once animate-duration-700 delay-300 animate-ease-linear">
           <Link href={URLS.home}>
-            <Image src={logo} alt="logo" width={130} className="w-24" />
+            <Image src={logo} alt="logo" width={1000} className="w-9" />
           </Link>
+          <h4 className="italic text-xl bg-gradient-to-tl font-extrabold from-white via-violet-red to-black-rose text-transparent bg-clip-text ms-4 uppercase animate-jump-in animate-once animate-duration-1000 animate-delay-[1500ms] animate-ease-in">
+            don't stop dreaming!
+          </h4>
           <div className="flex gap-4 items-center">
             {linksData.map((link, index) => (
               <Link

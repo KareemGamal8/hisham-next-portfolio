@@ -14,7 +14,7 @@ export default function Features() {
           />
           <AnimatedCounter
             start={0}
-            end={10400}
+            end={30000}
             duration={1000}
             text="Designs"
           />

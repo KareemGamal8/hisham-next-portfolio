@@ -11,7 +11,7 @@ export default function ClientsImages({ clients }: { clients: Client[] }) {
 
   return (
     <div
-      className="grid lg:grid-cols-4 gap-8 grid-cols-3 w-full overflow-hidden"
+      className="grid lg:grid-cols-4 lg:gap-8 grid-cols-2 w-full overflow-hidden"
       ref={clientsRef}
     >
       {clients.map((client) => (

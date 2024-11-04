@@ -56,6 +56,10 @@ export default function Hero() {
                       .start()
                       .pauseFor(1000)
                       .deleteAll()
+                      .typeString("visualizer")
+                      .pauseFor(1000)
+                      .start()
+                      .deleteAll()
                       .typeString("artist")
                       .pauseFor(1000)
                       .start();

@@ -5,6 +5,11 @@ import TextInput from "./TextInput";
 
 export default function EmailInput(props: FormControlProps) {
   return (
-    <TextInput type="email" rules={[emailRule, requiredRule]} {...props} />
+    <TextInput
+      name="email"
+      type="email"
+      rules={[emailRule, requiredRule]}
+      {...props}
+    />
   );
 }

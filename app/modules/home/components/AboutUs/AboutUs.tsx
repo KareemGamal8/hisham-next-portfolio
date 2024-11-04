@@ -21,7 +21,7 @@ export default function AboutUs() {
           }`}
         >
           <div className="flex flex-col gap-6">
-            <SectionTitle mainTitle="About Me" subtitle="Who am I!" />
+            <SectionTitle mainTitle="About Me" subtitle="Who I am!" />
             <p className="text-white text-lg font-medium">
               I am a Graphic Designer From Egypt with experience +4 years and my
               goal is to share my art with people all over the world. I enjoy

@@ -33,7 +33,7 @@ export default function CategoriesMenu() {
         className="flex relative pb-1 gap-2 items-center text-white text-sm font-medium"
         onClick={() => setOpenMenu(!openMenu)}
       >
-        <span>Categories</span>
+        <span className="max-lg:font-medium max-lg:text-lg">Categories</span>
         <IconChevronDown
           size={20}
           strokeWidth={2.5}
