@@ -40,8 +40,8 @@ const config: Config = {
       },
     },
     fontFamily: {
-      roboto: ["Roboto"],
-      edu: ["Edu AU VIC WA NT Hand"],
+      roboto: ["Roboto", "sans-serif"],
+      edu: ["Edu AU VIC WA NT Hand", "sans-serif"],
     },
   },
 };

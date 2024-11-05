@@ -23,7 +23,7 @@ export default function Hero() {
               height={300}
               src={wave}
               alt="wave"
-              className="w-[80vw] lg:w-[65vw] absolute right-1/2 -bottom-0 lg:-bottom-40 [@media(min-width:2150px)]:-bottom-48 max-w-screen-2xl -translate-x-16"
+              className="w-[80vw] lg:w-[65vw] absolute right-1/2 -bottom-0 md:-bottom-16 lg:-bottom-40 [@media(min-width:2150px)]:-bottom-48 max-w-screen-2xl -translate-x-16"
             />
             <Image
               width={300}
@@ -34,12 +34,12 @@ export default function Hero() {
             />
           </div>
         </div>
-        <div className="container">
-          <div className="flex lg:justify-between justify-center items-center md:flex-row flex-col-reverse gap-8">
+        <div className="container max-lg:pb-28">
+          <div className="flex lg:justify-between justify-center items-center lg:flex-row flex-col-reverse gap-8">
             <div
               className={`animate-fade-right animate-duration-[3000ms] animate-ease-out animate-delay-200`}
             >
-              <p className="font-edu absolute italic -top-2 left-0 bg-gradient-to-tl from-cinder via-violet-red to-black-rose text-transparent bg-clip-text lg:text-2xl text-md font-bold">
+              <p className="font-edu absolute italic lg:-top-2 -top-3 left-0 bg-gradient-to-tl from-cinder via-violet-red to-black-rose text-transparent bg-clip-text lg:text-2xl text-md font-bold">
                 HI There!
               </p>
               <h2 className="lg:text-6xl md:text-4xl sm:text-4xl text-3xl font-bold uppercase lg:leading-[4.5rem]">
